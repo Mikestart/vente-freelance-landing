@@ -363,6 +363,8 @@ nav.scrolled {
   overflow: hidden;
   position: relative;
   z-index: 2;
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 .marquee-track {
   display: flex;
@@ -373,14 +375,15 @@ nav.scrolled {
 .marquee-item {
   display: flex;
   align-items: center;
-  gap: 18px;
-  padding: 0 36px;
+  gap: 28px;
+  padding: 0 0;
   white-space: nowrap;
   font-family: var(--ff-head);
   font-size: 13px;
   letter-spacing: 0.15em;
   color: var(--muted);
   text-transform: uppercase;
+  padding-right: 28px;
 }
 .marquee-item .dot {
   width: 5px; height: 5px;
@@ -714,9 +717,10 @@ section { padding: 100px 48px; position: relative; }
   font-size: 19px;
   font-weight: 300;
   color: var(--muted);
-  line-height: 1.85;
+  line-height: 1.7;
   margin-bottom: 32px;
 }
+.about-bio br + br { display: block; content: ''; margin-top: 0.05em; }
 .about-bio strong { color: var(--off); font-weight: 600; }
 .about-badges {
   margin-top: auto;
@@ -1288,7 +1292,11 @@ footer {
         Réserver mon appel
         <span class="btn-arrow">→</span>
       </a>
-      <div class="hero-guarantee">Accompagnement jusqu'à ton premier client</div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <div class="hero-guarantee">Accompagnement jusqu'à ton premier client</div>
+        <div class="hero-guarantee">Coaching 1:1</div>
+        <div class="hero-guarantee">Mock-up calls</div>
+      </div>
     </div>
   </div>
 
@@ -1312,26 +1320,26 @@ footer {
 <!-- MARQUEE -->
 <div class="marquee-section">
   <div class="marquee-track">
-    <div class="marquee-item highlight"><span class="dot"></span>Décrocher ton premier client</div>
-    <div class="marquee-item"><span class="dot"></span>Méthode "OK, ON DÉMARRE QUAND ?"</div>
-    <div class="marquee-item highlight"><span class="dot"></span>8 semaines</div>
-    <div class="marquee-item"><span class="dot"></span>Mindset & Closing</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Freelance success</div>
-    <div class="marquee-item"><span class="dot"></span>Coaching 1:1</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Construire ton offre</div>
-    <div class="marquee-item"><span class="dot"></span>Prospecter avec méthode</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Vivre de ta passion</div>
-    <div class="marquee-item"><span class="dot"></span>Aucune excuse</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Décrocher ton premier client</div>
-    <div class="marquee-item"><span class="dot"></span>Méthode "OK, ON DÉMARRE QUAND ?"</div>
-    <div class="marquee-item highlight"><span class="dot"></span>8 semaines</div>
-    <div class="marquee-item"><span class="dot"></span>Mindset & Closing</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Freelance success</div>
-    <div class="marquee-item"><span class="dot"></span>Coaching 1:1</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Construire ton offre</div>
-    <div class="marquee-item"><span class="dot"></span>Prospecter avec méthode</div>
-    <div class="marquee-item highlight"><span class="dot"></span>Vivre de ta passion</div>
-    <div class="marquee-item"><span class="dot"></span>Aucune excuse</div>
+    <div class="marquee-item highlight">Décrocher ton premier client<span class="dot"></span></div>
+    <div class="marquee-item">Méthode "OK, ON DÉMARRE QUAND ?"<span class="dot"></span></div>
+    <div class="marquee-item highlight">8 semaines<span class="dot"></span></div>
+    <div class="marquee-item">Mindset & Closing<span class="dot"></span></div>
+    <div class="marquee-item highlight">Freelance success<span class="dot"></span></div>
+    <div class="marquee-item">Coaching 1:1<span class="dot"></span></div>
+    <div class="marquee-item highlight">Construire ton offre<span class="dot"></span></div>
+    <div class="marquee-item">Prospecter avec méthode<span class="dot"></span></div>
+    <div class="marquee-item highlight">Vivre de ta passion<span class="dot"></span></div>
+    <div class="marquee-item">Aucune excuse<span class="dot"></span></div>
+    <div class="marquee-item highlight">Décrocher ton premier client<span class="dot"></span></div>
+    <div class="marquee-item">Méthode "OK, ON DÉMARRE QUAND ?"<span class="dot"></span></div>
+    <div class="marquee-item highlight">8 semaines<span class="dot"></span></div>
+    <div class="marquee-item">Mindset & Closing<span class="dot"></span></div>
+    <div class="marquee-item highlight">Freelance success<span class="dot"></span></div>
+    <div class="marquee-item">Coaching 1:1<span class="dot"></span></div>
+    <div class="marquee-item highlight">Construire ton offre<span class="dot"></span></div>
+    <div class="marquee-item">Prospecter avec méthode<span class="dot"></span></div>
+    <div class="marquee-item highlight">Vivre de ta passion<span class="dot"></span></div>
+    <div class="marquee-item">Aucune excuse<span class="dot"></span></div>
   </div>
 </div>
 
@@ -1524,14 +1532,14 @@ footer {
     </div>
     <div class="about-content reveal reveal-delay-2">
       <div class="section-label">Qui suis-je ?</div>
-      <div class="about-name">MICKAEL<br>TOLEDANO</div>
+      <div class="about-name">MICKAEL TOLEDANO</div>
       <div class="about-role">Expert Vente · Coach Freelance</div>
       <p class="about-bio">
         <strong>Entrepreneur et expert en développement commercial</strong>, j'ai plus de 15 ans d'expérience en sales dans des environnements variés : start-up, PME, bureaux d'étude, grands groupes, scale-ups et licornes.
         <br><br>
         J'ai travaillé à <strong>Paris</strong> (La Défense), Sophia Antipolis, Marseille, Nice, mais aussi à <strong>Londres</strong>, Tel Aviv et <strong>San Francisco</strong>. J'ai participé à des levées de fonds, accompagné des entreprises jusqu'à leurs premiers <strong>100K de MRR</strong> et collaboré avec des profils exigeants : CEO, directeurs techniques, directeurs commerciaux et marketing.
         <br><br>
-        En 2019, j'ai participé à <strong>Y Combinator</strong>, une expérience qui a renforcé ma vision internationale du business et de la croissance.
+        En 2019, j'ai participé à <strong>Y Combinator</strong>, l'accélérateur de startups le plus influent au monde où sont nés Airbnb, Stripe, Dropbox.
         <br><br>
         J'ai également fondé deux <strong>collectifs de freelances</strong> et accompagné de nombreux indépendants à structurer leur offre et décrocher leurs premiers contrats.
         <br><br>
